@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="KoboldMarket.Api/KoboldMarket.Api.csproj" />
+  <Project Path="KoboldMarket.Application/KoboldMarket.Application.csproj" />
+  <Project Path="KoboldMarket.Domain/KoboldMarket.Domain.csproj" />
+  <Project Path="KoboldMarket.Infrastructure/KoboldMarket.Infrastructure.csproj" />
+</Solution>
