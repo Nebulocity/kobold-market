@@ -1,10 +1,25 @@
-// EF Cheat Sheet
+/***************************************************************
+*             My lazy EF Core migration cheat sheet            *
+***************************************************************/
 //
-// Create migration: 
-//      dotnet ef migrations add InitialCreate --project KoboldMarket.Infrastructure --startup-project KoboldMarket.Api
-// Update db:
+// New migration:
+//      dotnet ef migrations add <MigrationName> --project KoboldMarket.Infrastructure --startup-project KoboldMarket.Api
+//
+// Apply pending migrations:
 //      dotnet ef database update --project KoboldMarket.Infrastructure --startup-project KoboldMarket.Api
 //
+// List all migrations:
+//      dotnet ef migrations list --project KoboldMarket.Infrastructure --startup-project KoboldMarket.Api
+//
+// Roll back to a previously applied migration:
+//      dotnet ef database update <PreviousMigrationName --project KoboldMarket.Infrastructure --startup-project KoboldMarket.Api
+//
+// To remove a migration script:
+//      dotnet ef migrations remove --project KoboldMarket.Infrastructure --startup-project KoboldMarket.Api
+//
+// To nuke the Db and start fresh:
+//      dotnet ef database update 0 --project KoboldMarket.Infrastructure --startup-project KoboldMarket.Api
+
 
 using KoboldMarket.Domain.Users;
 using Microsoft.EntityFrameworkCore;
