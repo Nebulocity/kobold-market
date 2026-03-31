@@ -5,9 +5,19 @@ WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddOpenApi();
-// builder.Services.AddSwaggerGen();
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("FrontendDevelopment", policy =>
+    {
+        policy
+            .WithOrigins("http://localhost:5173")
+            .AllowAnyHeader()
+            .AllowAnyMethod();
+    });
+});
 
 // DbContext
 builder.Services.AddDbContext<KoboldMarketDbContext>(options =>
@@ -15,14 +25,12 @@ builder.Services.AddDbContext<KoboldMarketDbContext>(options =>
         builder.Configuration.GetConnectionString("KoboldMarketDatabase")));
 
 WebApplication app = builder.Build();
-
+app.UseCors("FrontendDevelopment");
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
-    // app.UseSwagger();
-    // app.UseSwaggerUI();
 }
 
 // Not going to use this right now.
