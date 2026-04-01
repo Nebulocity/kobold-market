@@ -1,8 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
-    <ProjectReference Include="..\KoboldMarket.Application\KoboldMarket.Application.csproj" />
-    <ProjectReference Include="..\KoboldMarket.Domain\KoboldMarket.Domain.csproj" />
+      <ProjectReference Include="..\KoboldMarket.Domain\KoboldMarket.Domain.csproj" />
   </ItemGroup>
 
   <ItemGroup>
