@@ -16,8 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\KoboldMarket.Application\KoboldMarket.Application.csproj" />
-    <ProjectReference Include="..\KoboldMarket.Infrastructure\KoboldMarket.Infrastructure.csproj" />
+<ProjectReference Include="..\KoboldMarket.Infrastructure\KoboldMarket.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

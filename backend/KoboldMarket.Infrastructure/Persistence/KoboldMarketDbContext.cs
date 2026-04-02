@@ -49,7 +49,6 @@ public sealed class KoboldMarketDbContext : DbContext
     public DbSet<MarketplaceListing> MarketplaceListings => Set<MarketplaceListing>();
     public DbSet<BuildShare> BuildShares => Set<BuildShare>();
 
-
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.ApplyConfigurationsFromAssembly(typeof(KoboldMarketDbContext).Assembly);
